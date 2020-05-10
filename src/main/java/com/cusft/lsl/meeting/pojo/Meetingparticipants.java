@@ -9,7 +9,8 @@ import lombok.Data;
  */
 @Data
 public class Meetingparticipants {
-    private int meetingId;//会议编号
-    private int empId;//员工编号
-
+//    private int meetingId;//会议编号
+//    private int empId;//员工编号
+    private int meeting_id;//会议编号
+    private int emp_id;//员工编号
 }

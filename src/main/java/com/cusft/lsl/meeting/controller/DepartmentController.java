@@ -13,15 +13,15 @@ import java.util.List;
  * @Date 2020/4/11 14:41
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/dept")
 public class DepartmentController {
 
     @Autowired
     DepartmentService departmentService;
 
     //查询部门
-    @GetMapping("/dept")
-    public String  getDeptAll(){
+    @GetMapping("/all")
+    public List<Department> getDeptAll(){
         List<Department> list =departmentService.getDept();
 
         if(list.size()==0){
@@ -31,24 +31,21 @@ public class DepartmentController {
                 System.out.println(d);
             }
         }
-        return "测试MyBatis能否正常工作,请看后台输出数据与否";
+//        return "测试MyBatis能否正常工作,请看后台输出数据与否";
+        return departmentService.getDept();
     }
 
 
     //新增部门
-    @PostMapping("/dept/add")
-    public String addDept(@RequestBody Department dept){
+    @PostMapping("/add")
+    public int addDept(@RequestBody Department dept){
        return departmentService.addDept(dept);
     }
     //删除部门
-    @Delete("/dept/{t_id:\\\\d+}")
+    @DeleteMapping("{dept_id:\\d+}")
     public boolean delete(@PathVariable int dept_id) {
+        System.out.println("进入了部门删除任务操作");
        return departmentService.deleteDept(dept_id);
     }
 
-
-    @GetMapping("data")
-    public String getData(){
-        return "测试MyBatis能否正常工作";
-    }
 }

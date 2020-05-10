@@ -10,9 +10,9 @@ import lombok.Data;
 @Data
 public class MeetingRoom {
 
-    private int roomId;//会议室编号
-    private String roomNam;//会议室名字
-    private int roomNum;//会议室门牌号
+    private int room_id;//会议室编号
+    private String room_name;//会议室名字
+    private int roomnum;//会议室门牌号
     private int capacity;//会议室容量
     private String status;//会议室状态 0：启用；1 停用；
     private String desc;//会议室描述

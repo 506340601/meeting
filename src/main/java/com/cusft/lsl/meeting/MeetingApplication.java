@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 //(exclude = DataSourceAutoConfiguration.class)
 @SpringBootApplication
-//@MapperScan(basePackages = "com.cusft.lsl.meeting.mapper")
+@MapperScan(basePackages = "com.cusft.lsl.meeting.mapper")
 public class MeetingApplication {
 
     public static void main(String[] args) {

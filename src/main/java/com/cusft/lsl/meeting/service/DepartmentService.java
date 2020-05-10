@@ -37,7 +37,7 @@ public class DepartmentService {
     }
 
     //新增某个部门
-    public String addDept(Department dept){
+    public int addDept(Department dept){
        return  departmentMapper.addDept(dept);
     }
 }

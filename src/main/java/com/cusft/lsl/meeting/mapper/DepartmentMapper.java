@@ -24,9 +24,10 @@ public interface DepartmentMapper {
     //删除某个部门
     @Delete("delete from department where dept_id=#{dept_id}")
     public boolean deleteDept(int dept_id);
+
     //插入新增某个部门
     @Insert("insert into department(dept_name) values(#{dept_name})")
-    public String addDept(Department dept);
+    public int addDept(Department dept);
 
 
 
